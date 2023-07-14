@@ -6,7 +6,7 @@ class Peixe(val nome: String?): Animal {
     }
 
     override fun mover(): String {
-        return "O peixe está nadando!"
+        return "O peixe está se movimentando!"
     }
 
     fun nadar(): String {
