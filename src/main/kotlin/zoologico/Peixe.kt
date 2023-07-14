@@ -1,6 +1,6 @@
 package zoologico
 
-class Peixe : Animal {
+class Peixe(val nome: String?): Animal {
     override fun emitirSom(): String {
         return "O peixe está emitindo um som!"
     }
