@@ -6,7 +6,7 @@ class Passaro(val nome: String?): Animal {
     }
 
     override fun mover(): String {
-        return "O pássaro está voando!"
+        return "O pássaro está se movimentando!"
     }
 
     fun voar(): String {

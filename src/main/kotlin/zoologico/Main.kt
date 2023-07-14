@@ -10,7 +10,7 @@ fun main(){
 
         when (opcao) {
             1 -> Zoologico.cadastrarAnimal()
-            2 -> println()
+            2 -> Zoologico.removerAnimal()
             3 -> Zoologico.listarAnimal()
             4 -> Zoologico.interagir()
             5 -> {

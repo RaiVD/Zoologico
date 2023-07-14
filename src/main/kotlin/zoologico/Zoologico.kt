@@ -68,7 +68,7 @@ class Zoologico {
                 1 -> {
                     if (leao.isNotEmpty()) {
                         for ((index, animal) in leao.withIndex()) {
-                            println("$index. ${animal.nome}")
+                            println("$index ${animal.nome}")
                         }
                         print("Escolha o número do animal para interagir: ")
                         val opcao = readlnOrNull()?.toIntOrNull()
@@ -89,7 +89,7 @@ class Zoologico {
                 2 -> {
                     if (passaro.isNotEmpty()) {
                         for ((index, animal) in passaro.withIndex()) {
-                            println("$index. ${animal.nome}")
+                            println("$index ${animal.nome}")
                         }
 
                         print("Escolha o número do animal para interagir: ")
@@ -111,7 +111,7 @@ class Zoologico {
                 3 -> {
                     if (peixe.isNotEmpty()) {
                         for ((index, animal) in peixe.withIndex()) {
-                            println("$index. ${animal.nome}")
+                            println("$index ${animal.nome}")
                         }
 
                         print("Escolha o número do animal para interagir: ")
@@ -178,6 +178,78 @@ class Zoologico {
                     }
                 } else -> println("Opção inválida. O animal não foi cadastrado.")
 
+            }
+        }
+        fun removerAnimal() {
+            println("===== Remoção de Animal =====")
+            println("1. Leão")
+            println("2. Pássaro")
+            println("3. Peixe")
+            println("==============================")
+
+            print("Escolha o tipo de animal que deseja remover: ")
+            val opcao = readlnOrNull()?.toIntOrNull()
+            when (opcao) {
+                1 -> {
+                    if (leao.isNotEmpty()) {
+                        for ((index, animal) in leao.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+                        print("Escolha o número do animal a ser removido: ")
+                        val opcao = readlnOrNull()?.toIntOrNull()
+
+                        if (opcao != null && opcao in 0 until leao.size) {
+                            val animalRemovido = leao[opcao]
+                            leao.remove(animalRemovido)
+                            println("${animalRemovido.nome} removido com sucesso!")
+                        } else {
+                            println("Opção inválida. O animal não foi removido.")
+                        }
+                    } else {
+                        println("Não há animais cadastrados para remover.")
+                    }
+                }
+                2 -> {
+                    if (passaro.isNotEmpty()) {
+                        for ((index, animal) in passaro.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+                        print("Escolha o número do animal a ser removido: ")
+                        val opcao = readlnOrNull()?.toIntOrNull()
+
+                        if (opcao != null && opcao in 0 until passaro.size) {
+                            val animalRemovido = passaro[opcao]
+                            passaro.remove(animalRemovido)
+                            println("${animalRemovido.nome} removido com sucesso!")
+                        } else {
+                            println("Opção inválida. O animal não foi removido.")
+                        }
+                    } else {
+                        println("Não há animais cadastrados para remover.")
+                    }
+                }
+
+                3 -> {
+                    if (peixe.isNotEmpty()) {
+                        for ((index, animal) in peixe.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+
+                        print("Escolha o número do animal a ser removido: ")
+                        val opcao = readlnOrNull()?.toIntOrNull()
+
+                        if (opcao != null && opcao in 0 until peixe.size) {
+                            val animalRemovido = peixe[opcao]
+                            peixe.remove(animalRemovido)
+                            println("${animalRemovido.nome} removido com sucesso!")
+                        } else {
+                            println("Opção inválida. O animal não foi removido.")
+                        }
+                    } else {
+                        println("Não há animais cadastrados para remover.")
+                    }
+                }
+                else -> println("Opção inválida. O animal não foi cadastrado.")
             }
         }
     }
