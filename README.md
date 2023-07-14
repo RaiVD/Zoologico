@@ -3,18 +3,26 @@
 # Funcionalidades
 O programa oferece as seguintes opções no menu:
 
-- Cadastrar: Permite ao usuário adicionar animais ao zoológico.
+### Cadastrar
 
-- Remover: Permite ao usuário remover animais do zoológico.
+Na opção de cadastro, você poderá escolher o tipo de animal a ser cadastrado: leão, pássaro ou peixe. Digite o número correspondente à opção desejada e pressione Enter. Em seguida, siga as instruções fornecidas para inserir o nome do animal. Após o cadastro bem-sucedido, uma mensagem de confirmação será exibida.
 
-- Listar: Exibe uma lista de todos os animais atualmente no zoológico.
+### Remover
 
-- Interagir: Interage com cada animal do zoológico, emitindo seu som e movimento específicos.
+Na opção de remoção, você poderá escolher o tipo de animal a ser removido: leão, pássaro ou peixe. Digite o número correspondente à opção desejada e pressione Enter. Em seguida, siga as instruções fornecidas para selecionar o animal a ser removido digitando o número correspondente a ele. Após a remoção bem-sucedida, uma mensagem de confirmação será exibida.
 
-- Sair: Encerra o programa.
+### Listar
+
+Na opção de listagem, você poderá escolher o tipo de animal a ser listado: leão, pássaro ou peixe. Digite o número correspondente à opção desejada e pressione Enter. Uma lista dos animais do tipo selecionado será exibida.
+
+### Interagir
+
+Na opção de interação, você poderá escolher o tipo de animal com o qual deseja interagir: leão, pássaro ou peixe. Digite o número correspondente à opção desejada e pressione Enter. Em seguida, siga as instruções fornecidas para selecionar o animal com o qual deseja interagir digitando o número correspondente a ele. A interação será realizada com o animal selecionado, exibindo informações específicas sobre o animal.
+
+### Sair
+Na opção sair, ele finaliza o codigo
 
 # Interface Animal
-
 A interface Animal define dois métodos que todo animal deve implementar:
 
 - emitirSom(): Retorna uma string representando o som do animal.
@@ -35,5 +43,5 @@ O programa inclui as seguintes classes concretas que implementam a interface Ani
   - Representa um peixe no zoológico. Ela fornece um método adicional:
   
   - nadar(): Retorna uma string representando o nado do peixe.
-  Abrir mensagem
-  
+
+
