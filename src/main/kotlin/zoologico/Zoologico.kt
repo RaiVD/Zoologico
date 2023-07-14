@@ -14,10 +14,8 @@ class Zoologico {
             println("2. Pássaro")
             println("3. Peixe")
             println("==============================")
-
             print("Escolha o tipo de animal para cadastrar: ")
             val opcao = readlnOrNull()?.toIntOrNull()
-
             when (opcao) {
                 1 -> {
                     var entrada = false
@@ -34,7 +32,6 @@ class Zoologico {
                         }
                     }
                 }
-
                 2 -> {
                     do {
                         println("Qual o nome do passaro:")
@@ -43,7 +40,6 @@ class Zoologico {
                         println("Pássaro cadastrado com sucesso!")
                     } while (nome == null)
                 }
-
                 3 -> {
                     do {
                         println("Qual o nome do peixe:")
@@ -52,7 +48,6 @@ class Zoologico {
                         println("Peixe cadastrado com sucesso!")
                     } while (nome == null)
                 }
-
                 else -> println("Opção inválida. O animal não foi cadastrado.")
             }
         }
@@ -63,7 +58,6 @@ class Zoologico {
                 println("Qual animal você quer interagir?\n\t 1- Leão \t 2- Passáro \t 3- Peixe")
                 opc = readln().toIntOrNull() ?: 0
             } while (opc == 0)
-
             when (opc) {
                 1 -> {
                     if (leao.isNotEmpty()) {
@@ -85,7 +79,6 @@ class Zoologico {
                         println("Não há animais cadastrados para interagir.")
                     }
                 }
-
                 2 -> {
                     if (passaro.isNotEmpty()) {
                         for ((index, animal) in passaro.withIndex()) {
@@ -107,7 +100,6 @@ class Zoologico {
                         println("Não há animais cadastrados para interagir.")
                     }
                 }
-
                 3 -> {
                     if (peixe.isNotEmpty()) {
                         for ((index, animal) in peixe.withIndex()) {
@@ -128,7 +120,6 @@ class Zoologico {
                     } else {
                         println("Não há animais cadastrados para interagir.")
                     }
-
                 }
             }
         }
@@ -140,11 +131,8 @@ class Zoologico {
             println("2. Pássaro")
             println("3. Peixe")
             println("==============================")
-
             print("Escolha o tipo de animal para listar: ")
             val opcao = readlnOrNull()?.toIntOrNull()
-
-
             when (opcao) {
                 1 -> {
                     if (leao.isNotEmpty()) {
@@ -156,7 +144,6 @@ class Zoologico {
                         println("Não há animais cadastrados para listar.")
                     }
                 }
-
                 2 -> {
                     if (passaro.isNotEmpty()) {
                         for ((index, animal) in passaro.withIndex()) {
@@ -167,7 +154,6 @@ class Zoologico {
                         println("Não há animais cadastrados para listar.")
                     }
                 }
-
                 3 -> {
                     if (peixe.isNotEmpty()) {
                         for ((index, animal) in peixe.withIndex()) {
@@ -177,7 +163,6 @@ class Zoologico {
                         println("Não há animais cadastrados para listar.")
                     }
                 } else -> println("Opção inválida. O animal não foi cadastrado.")
-
             }
         }
         fun removerAnimal() {
@@ -186,7 +171,6 @@ class Zoologico {
             println("2. Pássaro")
             println("3. Peixe")
             println("==============================")
-
             print("Escolha o tipo de animal que deseja remover: ")
             val opcao = readlnOrNull()?.toIntOrNull()
             when (opcao) {
@@ -228,7 +212,6 @@ class Zoologico {
                         println("Não há animais cadastrados para remover.")
                     }
                 }
-
                 3 -> {
                     if (peixe.isNotEmpty()) {
                         for ((index, animal) in peixe.withIndex()) {
