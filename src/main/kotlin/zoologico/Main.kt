@@ -12,7 +12,7 @@ fun main(){
             1 -> Zoologico.cadastrarAnimal()
             2 -> println()
             3 -> println()
-            4 -> println()
+            4 -> Zoologico.interagir()
             5 -> {
                 entrada = true
                 println("Saindo do programa...")
