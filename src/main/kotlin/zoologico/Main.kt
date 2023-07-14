@@ -9,7 +9,7 @@ fun main(){
         val opcao = readlnOrNull()?.toIntOrNull() ?: 0
 
         when (opcao) {
-            1 -> println()
+            1 -> Zoologico.cadastrarAnimal()
             2 -> println()
             3 -> println()
             4 -> println()
