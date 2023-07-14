@@ -9,10 +9,10 @@ fun main(){
         val opcao = readlnOrNull()?.toIntOrNull() ?: 0
 
         when (opcao) {
-            1 -> println()
-            2 -> println()
-            3 -> println()
-            4 -> println()
+            1 -> Zoologico.cadastrarAnimal()
+            2 -> Zoologico.removerAnimal()
+            3 -> Zoologico.listarAnimal()
+            4 -> Zoologico.interagir()
             5 -> {
                 entrada = true
                 println("Saindo do programa...")
