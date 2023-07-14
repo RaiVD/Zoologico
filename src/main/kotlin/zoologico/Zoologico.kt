@@ -55,7 +55,12 @@ class Zoologico {
         fun interagir() {
             var opc: Int
             do {
-                println("Qual animal você quer interagir?\n\t 1- Leão \t 2- Passáro \t 3- Peixe")
+                println("Qual animal você quer interagir?")
+                println("1. Leão")
+                println("2. Pássaro")
+                println("3. Peixe")
+                println("==============================")
+                print("Escolha o tipo de animal para listar: ")
                 opc = readln().toIntOrNull() ?: 0
             } while (opc == 0)
             when (opc) {
