@@ -85,6 +85,7 @@ class Zoologico {
                         println("Não há animais cadastrados para interagir.")
                     }
                 }
+
                 2 -> {
                     if (passaro.isNotEmpty()) {
                         for ((index, animal) in passaro.withIndex()) {
@@ -99,8 +100,7 @@ class Zoologico {
                             println(animal.voar())
                             println(animal.mover())
 
-                        }
-                        else {
+                        } else {
                             println("Opção inválida. Não foi possível interagir com o animal.")
                         }
                     } else {
@@ -108,7 +108,7 @@ class Zoologico {
                     }
                 }
 
-                3-> {
+                3 -> {
                     if (peixe.isNotEmpty()) {
                         for ((index, animal) in peixe.withIndex()) {
                             println("$index. ${animal.nome}")
@@ -122,15 +122,63 @@ class Zoologico {
                             println(animal.nadar())
                             println(animal.mover())
 
-                        }
-                        else {
+                        } else {
                             println("Opção inválida. Não foi possível interagir com o animal.")
                         }
                     } else {
                         println("Não há animais cadastrados para interagir.")
                     }
 
+                }
+            }
+        }
+
+
+        fun listarAnimal() {
+            println("===== Listar Animais =====")
+            println("1. Leão")
+            println("2. Pássaro")
+            println("3. Peixe")
+            println("==============================")
+
+            print("Escolha o tipo de animal para listar: ")
+            val opcao = readlnOrNull()?.toIntOrNull()
+
+
+            when (opcao) {
+                1 -> {
+                    if (leao.isNotEmpty()) {
+                        for ((index, animal) in leao.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+
+                    } else {
+                        println("Não há animais cadastrados para listar.")
+                    }
+                }
+
+                2 -> {
+                    if (passaro.isNotEmpty()) {
+                        for ((index, animal) in passaro.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+
+                    } else {
+                        println("Não há animais cadastrados para listar.")
+                    }
+                }
+
+                3 -> {
+                    if (peixe.isNotEmpty()) {
+                        for ((index, animal) in peixe.withIndex()) {
+                            println("$index. ${animal.nome}")
+                        }
+                    } else {
+                        println("Não há animais cadastrados para listar.")
+                    }
+                } else -> println("Opção inválida. O animal não foi cadastrado.")
+
             }
         }
     }
-}}
+}
